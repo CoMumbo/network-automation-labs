@@ -69,6 +69,3 @@ Model-driven config + declarative resource modules = minimal diff, safe re-runs.
 
 The credentials in `inventory.ini` (`admin` / `NokiaSrl1!`) are the public default credentials for Nokia SR Linux lab images. They are not secrets and are only valid inside the Containerlab sandbox. For production, credentials should be injected via Ansible Vault or environment variables.
 
-## Security Note
-
-The credentials in `inventory.ini` (`admin` / `NokiaSrl1!`) are the public default credentials for Nokia SR Linux lab images. They are not secrets and are only valid inside the Containerlab sandbox. For production, credentials should be injected via Ansible Vault or environment variables.
