@@ -1,0 +1,30 @@
+---
+- name: Enforce network-instance config on SR Linux
+  hosts: srlinux
+  gather_facts: false
+  tasks:
+    - name: Create a network instance (VRF) named BLUE
+      nokia.srlinux.config:
+        update:
+          - path: /network-instance[name=BLUE]
+            value:
+              name: BLUE
+              type: ip-vrf
+              admin-state: enable
+      register: result
+
+    - name: Show diff
+      ansible.builtin.debug:
+        var: result
+      when: result.changed
+
+    - name: Create interface ethernet-1/1 as a member of BLUE
+      nokia.srlinux.config:
+        update:
+          - path: /interface[name=ethernet-1/1]
+            value:
+              name: ethernet-1/1
+              admin-state: enable
+              subinterface:
+                - index: 0
+                  admin-state: enable

@@ -1,0 +1,7 @@
+# Containerlab runtime artifacts
+clab-*/
+*.log
+
+# Ansible
+*.retry
+.vault_pass
