@@ -7,7 +7,7 @@ Deploy a single-node SR Linux topology with Containerlab and use Ansible's
 ## Stack
 - Automation: Ansible (`nokia.srlinux` collection)
 - Environment: Containerlab (WSL-Containerlab distribution)
-- Device: Nokia SR Linux (ixrd2l)
+- Device: Nokia SR Linux (ixr-d2l)
 
 ## Run It
 
@@ -26,7 +26,7 @@ Deploy a single-node SR Linux topology with Containerlab and use Ansible's
 ### 5. Verify on device
     ssh admin@172.20.20.2
     # password: NokiaSrl1!
-    info from running /network-instance[name=BLUE]
+    info network-instance BLUE
 
 ## Expected Outcome
 - Network instance BLUE exists and is admin-enabled.
@@ -64,3 +64,7 @@ Model-driven config + declarative resource modules = minimal diff, safe re-runs.
         subinterface 0 {
             admin-state enable
         }
+
+## Security Note
+
+The credentials in `inventory.ini` (`admin` / `NokiaSrl1!`) are the public default credentials for Nokia SR Linux lab images. They are not secrets and are only valid inside the Containerlab sandbox. For production, credentials should be injected via Ansible Vault or environment variables.
