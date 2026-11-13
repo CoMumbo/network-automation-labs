@@ -1,7 +1,8 @@
-# Containerlab runtime artifacts
-clab-*/
-*.log
 
 # Ansible
+# Containerlab runtime artifacts
+*.log
 *.retry
 .vault_pass
+clab-*/
+lab02-nornir/backups/

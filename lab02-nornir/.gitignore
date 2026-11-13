@@ -1,0 +1,10 @@
+# Containerlab runtime
+clab-lab02/
+*.log
+
+# Nornir output
+backups/
+
+# Python cache
+__pycache__/
+*.pyc

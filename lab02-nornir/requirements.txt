@@ -1,0 +1,3 @@
+nornir>=3.0
+nornir-utils>=0.2
+nornir-srl>=0.9
