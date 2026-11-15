@@ -1,0 +1,6 @@
+srl1:
+  hostname: 172.20.20.2
+  groups: [srlinux]
+srl2:
+  hostname: 172.20.20.3
+  groups: [srlinux]

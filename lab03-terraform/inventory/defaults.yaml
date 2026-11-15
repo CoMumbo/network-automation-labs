@@ -1,0 +1,8 @@
+username: admin
+password: NokiaSrl1!
+platform: srlinux
+connection_options:
+  nornir_srl:
+    port: 57401
+    extras:
+      insecure: true

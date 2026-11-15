@@ -6,3 +6,7 @@
 .vault_pass
 clab-*/
 lab02-nornir/backups/
+lab03-terraform/.terraform/
+lab03-terraform/*.tfstate*
+lab03-terraform/backups/
+lab03-terraform/clab-lab03/
